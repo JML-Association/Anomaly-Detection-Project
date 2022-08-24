@@ -153,11 +153,11 @@ By Aug 25 10:30 AM
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
 ## :key:    Key Findings
-▪️ The top 4 drivers of churn are:
+▪️
     
-▪️ Average **monthly charges** is higher for customers who churn
+▪️ 
  
-▪️ Average **tenure** is shorter for customers who churn
+▪️ 
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
@@ -167,6 +167,7 @@ By Aug 25 10:30 AM
 ▪️ 
 
 ▪️ 
+
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 ## 🔜  Next Steps
 ▪️
