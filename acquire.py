@@ -16,7 +16,23 @@ def new_data():
     '''
     # Create SQL query.
     sql_query = '''
-    SELECT * FROM logs LEFT JOIN cohorts ON logs.user_id = cohorts.id
+    SELECT 
+        date,
+        time,
+        ip,
+        path,
+        user_id,
+        cohort_id,
+        name as cohort_name,
+        slack,
+        start_date,
+        end_date,
+        program_id
+    FROM
+        curriculum_logs.logs
+    join
+        curriculum_logs.cohorts on cohort_id = id
+    ;
     '''
     # Read in DataFrame from Codeup db.
     df = pd.read_sql(sql_query, get_connection('curriculum_logs'))
