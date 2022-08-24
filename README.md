@@ -55,9 +55,24 @@ Email to analyst:
 
 - Use **curriculum_log** database in the mySQL server
 
-- Write query to join useful tables to gather all data about the customers:  <u>customers, contract_types, payment_types, internet_service_types </u>
+- Write query to join useful tables:  <u>cohorts, logs</u>
      ```sh
-     SELECT * FROM logs LEFT JOIN cohorts ON logs.user_id = cohorts.id
+      SELECT 
+        date,
+        time,
+        ip,
+        path,
+        user_id,
+        cohort_id,
+        name as cohort_name,
+        slack,
+        start_date,
+        end_date,
+        program_id
+     FROM
+        curriculum_logs.logs
+     join
+        curriculum_logs.cohorts on cohort_id = id
      ```
 </details>
 
@@ -121,15 +136,14 @@ By Aug 23
 - [x] Data Acquisition: acquire data from database 
 - [x] README initial structure
 
-By Aug 24 12 PM
-- [ ] EDA complete
-
 By Aug 24 end of day
-- [ ] Final report complete
-- [ ] Gmail response
-- [ ] Fianl tweeks
+- [ ] EDA first Question complete
+- [ ] Final report structure complete
 
-By Aug 25 10:30 AM
+By Aug 25 12pm
+- [ ] Gmail response
+- [ ] Fianl tweeks in EDA
+- [ ] Final report complete
 - [ ] README complete
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
