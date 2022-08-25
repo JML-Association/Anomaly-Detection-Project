@@ -301,7 +301,21 @@ def q5(df):
 
     # return most popular web dev paths viewed
     return ds, wd
+def q5_ds(ds):
+    '''
+    This function plots the data science access activity to web dep curriculum
+    '''
+    ds_pages = ds[(ds['path'] == 'java-i') | (ds['path'] == 'java-ii') | (ds['path'] == 'java-ii') | (ds['path'] == 'java-iii') | (ds['path'] == 'jquery')]['path'].resample('d').count()
+    plt.figure(figsize = (12,6))
+    ds_pages.plot(title='Data Science Student Access to Web Devlopment Curriculum', color = '#003B85')
 
+def q5_wd(wd):
+    '''
+    This function plots the web devlopemnt student access activity to data science curriculum
+    '''
+    wd_pages = wd[(wd['path'] == 'classification/overview') | (wd['path'] == 'fundamentals/intro-to-data-science') | (wd['path'] == 'stats/compare-means')]['path'].resample('d').count()
+    plt.figure(figsize = (12,6))
+    wd_pages.plot(title='Web Development Student Access to Data Science Curriculum', color = '#f09c1a')
 def q6(df):
     grads = pd.DataFrame(df[df.date>df.end_date].program.value_counts())
     plt.figure(figsize=(16,8))
@@ -356,5 +370,28 @@ def q6_p4(df):
     plt.figure(figsize=(16,8))
     sns.barplot(x=p4.index, y=p4.path,palette = 'mako')
     plt.title('Most Frequently Visited Topics Post Graduation - Front End Program', fontsize = 20)
+    plt.xlabel('Topics', fontsize = 15)
+    plt.ylabel('No. of Log Entry', fontsize = 15)
+
+def q7_p1(df):
+    '''
+    This function visualize the topics that got accessed the least for web dep students
+    '''
+    wb_plot = pd.DataFrame([['JavaScript Working with Variables', 1], ['Java-i', 1], ['HTML', 1], ['HTML-CSS Introduction', 1], ['Environment Setup', 1], ['Coding Challenges', 1]], columns = ['Lesson', 'Count'])
+
+    plt.figure(figsize=(16,8))
+    sns.barplot(x=wb_plot['Lesson'], y=wb_plot['Count'],palette = 'mako')
+    plt.title('Topics Accessed the Least - Web Development Programs', fontsize = 20)
+    plt.xlabel('Topics', fontsize = 15)
+    plt.ylabel('No. of Log Entry', fontsize = 15)
+
+def q7_p2(df):
+    '''
+    This function visualize the topics that got accessed the least for data science students
+    '''
+    ds_plot = pd.DataFrame([['Introduction to Python', 1], ['Creating Charts',1], ['Case Statements', 1], ['ML Methodologies Drawing', 1], ['Tidy Data', 1], ['git/cli', 1], ['mySQL-Introduction', 1]], columns = ['Lesson', 'Count'])
+    plt.figure(figsize=(16,8))
+    sns.barplot(x=ds_plot['Lesson'], y=ds_plot['Count'],palette = 'mako')
+    plt.title('Topics Accessed the Least - Web Development Programs', fontsize = 20)
     plt.xlabel('Topics', fontsize = 15)
     plt.ylabel('No. of Log Entry', fontsize = 15)
