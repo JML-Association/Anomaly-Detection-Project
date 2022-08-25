@@ -158,9 +158,9 @@ Email:
 #### :three:   Exploratory Analysis
 - Address 6 questions raised in email
 
-- Create visualizations for each question
+- Create visualizations to support findings
 
-- Address questions raised in email.
+- Write functions for final report
     
 ## 📅 Timeline for Data Science Team
 By Aug 23
