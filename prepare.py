@@ -10,8 +10,11 @@ def prep_data(df):
     This function takes in a messy dataframe and return the cleaned verison of dataframe.
     Detial steps are in code comment below.
     '''
-    # Set date columns as datatime as index
+    # Change date columns to datetime
     df.date = pd.to_datetime(df.date)
+    df.start_date = pd.to_datetime(df.start_date)
+    df.end_date = pd.to_datetime(df.end_date)
+    # Set date columns as datatime as index
     df = df.set_index(df.date)
 
     # Drop null values
