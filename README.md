@@ -215,19 +215,3 @@ By Aug 25 12pm
 ▪️ **Most Visited Topics For Front End Program:**  <span style="color: blue">HTML, CSS, Introduction to HTML-CSS</span>
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
-
-## :high_brightness:    Recommendations
-▪️ 
-
-▪️ 
-
-▪️ 
-
-<hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
-
-## 🔜  Next Steps
-▪️
-
-▪️ 
-
-▪️ 
