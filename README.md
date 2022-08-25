@@ -193,6 +193,7 @@ By Aug 25 12pm
 ▪️ 
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
+
 ## 🔜  Next Steps
 ▪️
 
