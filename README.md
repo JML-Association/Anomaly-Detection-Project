@@ -17,7 +17,9 @@ August 2022
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
 ## :chart:   Project Goals
-Codeup staff bring up some questions to the data science team in email, and our goal is to answer the quesions regaring the security of codeup curriculum through anomaly detection and data analysis.
+**Codeup** staff bring up some questions to the data science team in email regarding concerns of the curriculum's safety.
+
+Our goal is to answer the quesions and identify users with abnormal activity through anomaly detection and data analysis.
 
 Email:
 
@@ -33,7 +35,7 @@ Email:
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
-## Questions
+## 💡 Questions
 1. **Which lesson appears to attract the most traffic consistently across cohorts (per program), which lessons are least accessed??**(Luis)
 
 2. **Is there a cohort that referred to a lesson significantly more than other cohorts seemed to gloss over?** (Jeremy)
@@ -47,6 +49,23 @@ Email:
 6. **What topics are grads continuing to reference after graduation and into their jobs (for each program)?**(Merdith)
 
 7. **Which lessons are least accessed?** (Luis)
+
+<hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
+
+
+## :open_file_folder:   Data Dictionary
+**Variable** |    **Value**    | **Meaning**
+---|---|---
+*date* | datetime | The date of log entry
+*time* | datetime | The time of the day of log entry
+*path* | string | The path the user is on
+*user id* | float | The primary key of log table, indicating each user
+*ip* | string | The user's ip address
+*name* | string | The name of user's cohort
+*slack* | string | The name of the slack chanel that user belongs to
+*start date*| datetime | The start date of the cohort
+*end date* | datetime | The end date of the cohort
+*program id* | datetime | This indicates which program is the user in
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
@@ -162,28 +181,38 @@ By Aug 25 12pm
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
-## :open_file_folder:   Data Dictionary
-**Variable** |    **Value**    | **Meaning**
----|---|---
-*date* | datetime | The date of log entry
-*time* | datetime | The time of the day of log entry
-*path* | string | The path the user is on
-*user id* | float | The primary key of log table, indicating each user
-*ip* | string | The user's ip address
-*name* | string | The name of user's cohort
-*slack* | string | The name of the slack chanel that user belongs to
-*start date*| datetime | The start date of the cohort
-*end date* | datetime | The end date of the cohort
-*program id* | datetime | This indicates which program is the user in
-
-<hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
-
 ## :key:    Key Findings
-▪️
+▪️ Data Science cohorts access <span style="color: blue"><b>classification/overview</b></span>  the most. There are 100+ pages that were accessed only once. For example: <span style="color: blue">"Introduction to Python", "Creating Charts", "Case Statements", "ML Methodologies Drawing", "Tidy Data", "git/cli", "mySQL Introduction", etc.</span>
+
+▪️ Web Development cohorts access <span style="color: blue"><b>javascript-i</b></span> the most. There are 400+ pages that were accessed only once. For example: <span style="color: blue">"JavaScript Working with Variables", "Java-i", "HTML", "HTML-CSS Introduction", etc.</span>
     
-▪️ 
+▪️ For **Full Stack PHP (Web Development) Program:**
+
+    - cohort 1 looked at jquery much more than other cohorts
+    
+    - cohort 17 looked at jquery and java-1/methods much more than other cohorts.
+    
+▪️ For **Full Stack Java (Web Development), Data Science, Front End Program:** <span style="color: blue">None of the cohorts looked at a lesson signifcantly more that another cohort just glanced at.</span>
  
-▪️ 
+▪️ <span style="color: blue">4 users hardly ever accessed the curriculum.</span> All 4 users are from **Full Stack Java (Web Development) Program**. Their information are provided above.
+
+▪️ There are <span style="color: blue">29 users have suspicious activities</span>, among those users we suspect 2 of them perform web-scrapping and 3 appear to be accessing curriculums that they shouldn't access.
+
+▪️ There is <span style="color: blue">no suspicious IP address</span>. But for those who have significant amount of IP addresses during their program, their IP address appear to be distributed accross the United States.
+
+▪️ 116 users have <span style="color: blue">abnormal amount of log entry</span> (page visit).
+
+▪️ **For Data Science Program**: There <span style="color: blue">does not appear to be any access</span> to the Web Dev paths before September 2019, and after December 2019. Which leads us to believe they did not have access during those time periods.
+
+▪️ **For Web Development Program**: There <span style="color: blue">appears to be access to the Data Science paths</span> after September 2019. Specifically, from July 2020 to April 2021.
+
+▪️ **Most Visited Topics For Full Stack Java Program:**  <span style="color: blue">HTML, JavaScript, CSS, Java, Appendix</span>
+
+▪️ **Most Visited Topics For Full Stack PHP Program:**  <span style="color: blue">JavaScript, CSS, Java, Spring, Appendix</span>
+
+▪️ **Most Visited Topics For Data Science Program:**  <span style="color: blue">Anomaly Detection, mySQL, Classification, Feature Scaling, AL-ML-DL, SQL Database Design</span>
+
+▪️ **Most Visited Topics For Front End Program:**  <span style="color: blue">HTML, CSS, Introduction to HTML-CSS</span>
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
