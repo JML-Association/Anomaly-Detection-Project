@@ -31,7 +31,7 @@ Email:
 
     (Questions are listed in EDA)
     
-    Send your email before the due date and time (5:00 PM CST, Thursday 8/23/22) to staff-kalpana@codeup.com (Only one team member should do this on behalf of the whole team).
+    Send your email before the due date and time (5:00 PM CST, Thursday 8/23/22).
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
@@ -162,7 +162,7 @@ Email:
 
 - Address questions raised in email.
     
-## Timeline for Data Science Team
+## 📅 Timeline for Data Science Team
 By Aug 23
 - [x] Sketch out plan and each team member task
 - [x] EDA questions assigned
@@ -174,7 +174,7 @@ By Aug 24 end of day
 - [x] Final report structure complete
 
 By Aug 25 12pm
-- [ ] Gmail response
+- [x] Gmail response
 - [x] Fianl tweeks in EDA
 - [x] Final report complete
 - [x] README complete
