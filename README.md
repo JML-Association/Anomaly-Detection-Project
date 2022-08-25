@@ -175,9 +175,9 @@ By Aug 24 end of day
 
 By Aug 25 12pm
 - [ ] Gmail response
-- [ ] Fianl tweeks in EDA
-- [ ] Final report complete
-- [ ] README complete
+- [x] Fianl tweeks in EDA
+- [x] Final report complete
+- [x] README complete
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
