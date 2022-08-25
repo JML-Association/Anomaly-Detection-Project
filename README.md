@@ -1,4 +1,6 @@
-# Anomaly Detection
+![web-scraping](https://user-images.githubusercontent.com/105242871/186574688-16f1f00f-5c59-434a-b63a-773bde967c56.jpeg)
+
+# Codeup Curriculum Anomaly Detection
 Team members: **Jeremy Lagunas**, **Meredith Wang**, **Luis Arce**
 
 August 2022
