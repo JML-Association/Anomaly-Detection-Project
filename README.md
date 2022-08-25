@@ -182,6 +182,9 @@ By Aug 25 12pm
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
 ## :key:    Key Findings
+<img width="999" alt="user_activity" src="https://user-images.githubusercontent.com/105242871/186745401-8418c780-eddb-41cd-a88a-97baae24c4bd.png">
+
+
 ▪️ Data Science cohorts access <span style="color: blue"><b>classification/overview</b></span>  the most. There are 100+ pages that were accessed only once. For example: <span style="color: blue">"Introduction to Python", "Creating Charts", "Case Statements", "ML Methodologies Drawing", "Tidy Data", "git/cli", "mySQL Introduction", etc.</span>
 
 ▪️ Web Development cohorts access <span style="color: blue"><b>javascript-i</b></span> the most. There are 400+ pages that were accessed only once. For example: <span style="color: blue">"JavaScript Working with Variables", "Java-i", "HTML", "HTML-CSS Introduction", etc.</span>
