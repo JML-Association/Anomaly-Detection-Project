@@ -399,6 +399,6 @@ def q7_p2(df):
     ds_plot = pd.DataFrame([['Introduction to Python', 1], ['Creating Charts',1], ['Case Statements', 1], ['ML Methodologies Drawing', 1], ['Tidy Data', 1], ['git/cli', 1], ['mySQL-Introduction', 1]], columns = ['Lesson', 'Count'])
     plt.figure(figsize=(16,8))
     sns.barplot(x=ds_plot['Lesson'], y=ds_plot['Count'],palette = 'mako')
-    plt.title('Topics Accessed the Least - Web Development Programs', fontsize = 20)
+    plt.title('Topics Accessed the Least - Data Science Programs', fontsize = 20)
     plt.xlabel('Topics', fontsize = 15)
     plt.ylabel('No. of Log Entry', fontsize = 15)
