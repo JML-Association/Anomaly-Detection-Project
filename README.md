@@ -150,7 +150,7 @@ By Aug 23
 
 By Aug 24 end of day
 - [x] EDA first Question complete
-- [ ] Final report structure complete
+- [x] Final report structure complete
 
 By Aug 25 12pm
 - [ ] Gmail response
