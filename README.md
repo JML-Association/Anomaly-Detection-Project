@@ -164,7 +164,7 @@ Email:
     
 ## 📅 Timeline for Data Science Team
 By Aug 23
-- [x] Sketch out plan and each team member task
+- [x] Sketch out plan and assign each team member task
 - [x] EDA questions assigned
 - [x] Data Acquisition: acquire data from database 
 - [x] README initial structure
@@ -172,6 +172,7 @@ By Aug 23
 By Aug 24 end of day
 - [x] EDA first Question complete
 - [x] Final report structure complete
+- [x] Explore functions for final report
 
 By Aug 25 12pm
 - [x] Gmail response
