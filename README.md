@@ -15,7 +15,9 @@ August 2022
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
 ## :chart:   Project Goals
-Email to analyst:
+Codeup staff bring up some questions to the data science team in email, and our goal is to answer the quesions regaring the security of codeup curriculum through anomaly detection and data analysis.
+
+Email:
 
 
     Hello,
@@ -24,9 +26,8 @@ Email to analyst:
     I have some questions for you that I need answered before the board meeting Thursday afternoon. My questions are listed below; however, if you discover anything else important that I didn’t think to ask, please include that as well.
 
     (Questions are listed in EDA)
-- Send your email before the due date and time (5:00 PM CST, Thursday 8/23/22) to staff-kalpana@codeup.com (Only one team member should do this on behalf of the whole team).
-
-- In Google Classroom, submit a link to a final notebook on GitHub that asks and answers questions in detail. Be sure to document the work you do to justify findings. Remember, your stakeholder may need to show your notebook during the board meeting. Try and make it as clear and professional as possible for them.
+    
+    Send your email before the due date and time (5:00 PM CST, Thursday 8/23/22) to staff-kalpana@codeup.com (Only one team member should do this on behalf of the whole team).
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
@@ -42,6 +43,8 @@ Email to analyst:
 5. **At some point in 2019, the ability for students and alumni to access both curriculums (web dev to ds, ds to web dev) should have been shut off. Do you see any evidence of that happening? Did it happen before?**(Jeremy)
 
 6. **What topics are grads continuing to reference after graduation and into their jobs (for each program)?**(Merdith)
+
+7. **Which lessons are least accessed?** (Luis)
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
@@ -109,12 +112,21 @@ Email to analyst:
 <details>
 <summary> Data Cleaning</summary>
 
-- **Missing values: 
+- **Missing value**: We only have 1 missing value in this dataset and it's being dropped.
     
-- **Data types:
+- **Data Encoding**: We encoded `program_id` and created new column `program` with program's name corresponding to the id.
     
 - Create function `prep_data` to clean and prepare data with steps above
+    ```sh
+    def prep_data(df):
+        df.date = pd.to_datetime(df.date)
+        df = df.set_index(df.date)
+        df = df.dropna()
+        df['program'] = df.program_id.map({1: 'Full Stack PHP', 2: 'Full Stack Java', 3: 'Data Science', 4: 'Front End'})
 
+        return df
+    ```
+    
 - Import [prepare.py](prepare.py)
 
 - Test prepare function
@@ -129,7 +141,7 @@ Email to analyst:
 
 - Address questions raised in email.
     
-## Team Timeline
+## Timeline for Data Science Team
 By Aug 23
 - [x] Sketch out plan and each team member task
 - [x] EDA questions assigned
@@ -137,7 +149,7 @@ By Aug 23
 - [x] README initial structure
 
 By Aug 24 end of day
-- [ ] EDA first Question complete
+- [x] EDA first Question complete
 - [ ] Final report structure complete
 
 By Aug 25 12pm
