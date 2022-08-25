@@ -301,3 +301,60 @@ def q5(df):
 
     # return most popular web dev paths viewed
     return ds, wd
+
+def q6(df):
+    grads = pd.DataFrame(df[df.date>df.end_date].program.value_counts())
+    plt.figure(figsize=(16,8))
+    sns.barplot(x=grads.index, y=grads.program,palette = 'mako')
+    plt.title('Post Graduation Number of Logs per Program', fontsize = 20)
+    plt.xlabel('Program', fontsize = 15)
+    plt.ylabel('No. of Log Entry', fontsize = 15)
+def q6_p1(df):
+    '''
+    This function visualize the most frequently visited topics for full stack java program
+    '''
+    p1 = pd.DataFrame(df[(df.date>df.end_date)&(df.program_id == 1)].path.value_counts().head(10))
+    # Visualizing full stack java most frequent lesson
+    plt.figure(figsize=(16,8))
+    sns.barplot(x=p1.index, y=p1.path,palette = 'mako')
+    plt.title('Most Frequently Visited Topics Post Graduation - Full Stack Java Program', fontsize = 20)
+    plt.xlabel('Topics', fontsize = 15)
+    plt.ylabel('No. of Log Entry', fontsize = 15)
+
+def q6_p2(df):
+    '''
+    This function visualize the most frequently visited topics for full stack php program
+    '''
+    p2 = pd.DataFrame(df[(df.date>df.end_date)&(df.program_id == 2)].path.value_counts().head(10))
+    # Visualizing full stack php most frequent lesson
+    plt.figure(figsize=(16,8))
+    sns.barplot(x=p2.index, y=p2.path,palette = 'mako')
+    plt.title('Most Frequently Visited Topics Post Graduation - Full Stack PHP Program', fontsize = 20)
+    plt.xlabel('Topics', fontsize = 15)
+    plt.ylabel('No. of Log Entry', fontsize = 15)
+
+def q6_p3(df):
+    '''
+    This function visualize the most frequently visited topics for data science program
+    '''
+    p3 = pd.DataFrame([ ['Anomaly Detection', 384],['MySQL', 275], ['Classification', 266], ['Feature Scaling', 219],
+                  ['AL-ML-DL-timeline', 189], ['Modern_Data_Scientist.jpg', 187], ['Intro to Data Science', 184], ['SQL Database Design', 84]], columns = ['Lesson', 'Count'])
+    
+    # Visualizing full stack php most frequent lesson
+    plt.figure(figsize=(20,8))
+    sns.barplot(x=p3['Lesson'], y=p3['Count'],palette = 'mako')
+    plt.title('Most Frequently Visited Topics Post Graduation - Data Science Program', fontsize = 20)
+    plt.xlabel('Topics', fontsize = 15)
+    plt.ylabel('No. of Log Entry', fontsize = 15)
+
+def q6_p4(df):
+    '''
+    This function visualize the most frequently visited topics for front end program
+    '''
+    p4 = pd.DataFrame(df[(df.date>df.end_date)&(df.program_id == 4)].path.value_counts().head())
+    # Visualizing full stack php most frequent lesson
+    plt.figure(figsize=(16,8))
+    sns.barplot(x=p4.index, y=p4.path,palette = 'mako')
+    plt.title('Most Frequently Visited Topics Post Graduation - Front End Program', fontsize = 20)
+    plt.xlabel('Topics', fontsize = 15)
+    plt.ylabel('No. of Log Entry', fontsize = 15)
