@@ -129,7 +129,14 @@ def q2_p2():
     plt.title("Cohort Jquery & Java-i/methods View Comparison")
     plt.show()
 
-def q3_distribution(df):
+def q3_result():
+    '''
+    This function return the users who have hardly accessed the curriculum during their active time
+    '''
+    result_df = pd.DataFrame([[940, 138, 'Neptune', 'Full Stack Java'], [918, 138, 'Neptune', 'Full Stack Java'],
+                         [879, 135, 'Macro', 'Full Stack Java'], [619, 57, 'Ganymede', 'Full Stack Java']], columns = ['User_id', 'Cohort_id', 'Cohort_name', 'Program'])
+    return result_df
+def q4_distribution(df):
     '''
     This function takes in a dataframe and plot the distribution of amount of IP addresses belong to users
     '''
@@ -141,7 +148,7 @@ def q3_distribution(df):
     plt.title('IP Address Amount per User Distribution')
     sns.distplot(x=ip['ip'], **kwargs, color = '#004987')
 
-def q3_upperbound(df):
+def q4_upperbound(df):
     '''
     This funciton prints out the upper_bound of the IP address amount
     '''
@@ -153,7 +160,7 @@ def q3_upperbound(df):
     upper_bound = q3 + 3*iqr
     print(Fore.BLUE +'The upper bound of IP address amount is: ', upper_bound)
 
-def q3_abnormal_ip(df):
+def q4_abnormal_ip(df):
     '''
     THis function plot the top 6 users with abnormal amount of IP address
     '''
@@ -250,7 +257,7 @@ def find_anomalies(df, user, span, weight, plot=False):
     # Return only records that sit outside of bollinger band upper limit
     return my_df[my_df.pct_b>1]
 
-def q3_abnormal_users(df):
+def q4_abnormal_users(df):
     '''
     This function plot the top 6 users with abnormal amount of page visit and abnormal activity patterns
     '''
